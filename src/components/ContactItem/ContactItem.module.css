@@ -3,10 +3,10 @@
 
     height: 460px;
     width: 380px;
-    margin-top: 168px;
-    margin-left: auto;
-    margin-right: auto;
-    
+    /* margin-top: 168px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -31,8 +31,8 @@
     /* height: 22px; */
     /* width: 76px; */
     position: absolute;
-        top: 20px;
-        left: 20px;
+    top: 20px;
+    left: 20px;
 }
 
 
@@ -40,17 +40,17 @@
     height: 168px;
     width: 308px;
     position: absolute;
-        top: 28px;
+    top: 28px;
 }
-
 
 .avatar {
     /* height: 80px; */
     /* width: 80px; */
     position: absolute;
-        top: 178px;
-        z-index: 99;
+    top: 178px;
+    z-index: 99;
 }
+
 
 .rectangle {
     /* height: 80px; */
@@ -62,7 +62,7 @@
 
 .userName {
     position: absolute;
-        top: 255px;
+    top: 255px;
     color: #ba8bf8;
 }
 
@@ -72,7 +72,7 @@
 
 
 .followers {
-    margin-top:16px;
+    margin-top: 16px;
 }
 
 
@@ -93,10 +93,10 @@
     border: none;
     cursor: pointer;
     outline: none;
-    
+
     border-radius: 10.3108px;
     box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-    
+
     color: #000000;
     background-color: #EBD8FF;
 }
@@ -123,10 +123,10 @@
     border: none;
     cursor: pointer;
     outline: none;
-    
+
     border-radius: 10.3108px;
     box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-    
+
     color: #000000;
     background-color: #5CD3A8;
 }
@@ -134,5 +134,3 @@
 .btnFOLLOWING:focus {
     background-color: #3ec594;
 }
-
-

@@ -96,7 +96,7 @@ export const App = () => {
 
   // console.log("start:", start); //!
   return (
-    <>
+    <div className={css.container}>
       <ul className={css.cardList}>
         {/* <p>{start}</p> */}
         <ContactItem
@@ -106,7 +106,6 @@ export const App = () => {
           // toggleTrigger={toggleTrigger}
         />
       </ul>
-      
-    </>
+    </div>
   );
 };

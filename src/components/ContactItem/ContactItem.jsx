@@ -194,7 +194,7 @@ export const ContactItem = ({ contacts }) => {
   return (
     <>
       {contacts.map(({ id, user, tweets, followers }) => (
-        <div
+        <li
           key={id}
           className={css.card}>
             {/* //! logo */}
@@ -263,7 +263,7 @@ export const ContactItem = ({ contacts }) => {
             {/* FOLLOW */}
             {arrTrigger[id-1] ? "FOLLOWING" : "FOLLOW"}
           </button>
-        </div>
+        </li>
       ))}
     </>
   );
