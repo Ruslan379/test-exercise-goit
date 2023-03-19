@@ -59,12 +59,18 @@ export const ContactItem = ({ contacts }) => {
   // });
 
   //! var.2
+  //! Массив-Триггер со зачениями true/false в зависимости от сотояние кнопки
+  //! Считываем значения true/false в Массив-Триггер из Local Storage
+  //! Если Local Storage пустой, то записываем массив arrFollowers 
   const [arrTrigger, setArrTrigger] = useState(
     JSON.parse(localStorage.getItem("ArrFollowers")) ?? arrFollowers
   );
+
+  //! Дополнительный триггер (для перерендования)
   const [trigger, setTrigger] = useState(false); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
+  //! Пишем в Local Storage весь Массив-Триггер (arrTrigger)
   useEffect(() => {
     localStorage.setItem("ArrFollowers", JSON.stringify(arrTrigger));
     console.log("ЗАПИСЬ в Local Storage:", arrTrigger);
@@ -141,7 +147,7 @@ export const ContactItem = ({ contacts }) => {
 
 
   
-    //!----------------------------------------------------------------
+  //!----------------------------------------------------------------
   // for (let idNumber = 0; idNumber < contactsLength; idNumber += 1) {
   //   if (arrTrigger[idNumber]) {
   //     console.log(`TRUE-->arrTrigger[${idNumber}]:`, arrTrigger[idNumber]); //!
@@ -153,7 +159,8 @@ export const ContactItem = ({ contacts }) => {
   //   //   console.log(`contacts[${idNumber}].followers`, contacts[idNumber].followers); //!
   //   };
   // }
-    //!----------------------------------------------------------------
+  //!----------------------------------------------------------------
+  //! Логика работы кнопки FOLLOW/FOLLOWING 
     const toggleTrigger = (id) => {
       console.log("id:", id); //!
       const idNumber = Number(id) - 1;
