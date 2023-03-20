@@ -14,7 +14,10 @@ import useLocalStorage from './hooks/useLocalStorage'; //?
 // import avatar from 'images/boy.svg'; //?
 // import rectangle from 'images/rectangle.svg'; //?
 
-import {ContactItem} from './ContactItem/ContactItem.jsx';
+//! Components
+import { ContactItem } from './ContactItem/ContactItem.jsx';
+import { OneCard } from './OneCard/OneCard.jsx'
+
 //! DB contacts
 import contacts from 'db/contacts.json';
 // import contacts2 from 'db/contacts2.json';
@@ -112,15 +115,21 @@ export const App = () => {
         {triggerTask ? "One card" : "Many cards"}
       </button>
 
-      <ul className={css.cardList}>
-        {/* <p>{start}</p> */}
-        <ContactItem
-          contacts={contacts}
+      {!triggerTask && (
+          <OneCard />
+      )}
+
+      {triggerTask && (
+        <ul className={css.cardList}>
+          {/* <p>{start}</p> */}
+          <ContactItem
+            contacts={contacts}
           // contacts2={contacts2}
           // start={start}
           // toggleTrigger={toggleTrigger}
-        />
-      </ul>
+          />
+        </ul>
+      )}
     </div>
   );
 };
