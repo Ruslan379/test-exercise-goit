@@ -110,6 +110,7 @@ export const App = () => {
   // console.log("start:", start); //!
   return (
     <div className={css.container}>
+      {/* //! Trigger button */}
       <ButtonTrigger
         trigger={triggerTask}
         toggleTrigger={toggleTriggerTask}
@@ -124,11 +125,11 @@ export const App = () => {
       >
         {triggerTask ? "One card" : "Many cards"}
       </button> */}
-
+      {/* //! One card */}
       {!triggerTask && (
           <OneCard />
       )}
-
+      {/* //! Many cards */}
       {triggerTask && (
         <ul className={css.cardList}>
           {/* <p>{start}</p> */}

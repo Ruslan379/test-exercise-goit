@@ -6,6 +6,9 @@ import {
 // import useLocalStorage from '../hooks/useLocalStorage';
 // import useArrLocalStorage from '../hooks/useArrLocalStorage'; //?
 
+//! Components
+import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
+
 //! images
 import logo from 'images/logo.svg';
 // import { ReactComponent as Picture } from 'images/picture2.svg';
@@ -255,14 +258,20 @@ export const ContactItem = ({ contacts }) => {
               &nbsp;FOLLOWERS
           </p>
           {/* //! Trigger button */}
-          <button
+          <ButtonTrigger
+            trigger={arrTrigger[id-1]}
+            toggleTrigger={() => {toggleTrigger(id)}}
+            textTrue={"FOLLOWING"}
+            textFalse={"FOLLOW"}
+            inversionBackColor={false}
+          />
+          {/* <button
             type="button"
             className={arrTrigger[id-1] ? css.btnFOLLOWING : css.btnFOLLOW}
             onClick={() => {toggleTrigger(id)}}
           >
-            {/* FOLLOW */}
             {arrTrigger[id-1] ? "FOLLOWING" : "FOLLOW"}
-          </button>
+          </button> */}
         </li>
       ))}
     </>

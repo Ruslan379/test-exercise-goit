@@ -1,5 +1,8 @@
 import useLocalStorage from '../hooks/useLocalStorage';
 
+//! Components
+import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
+
 //! images
 import logo from 'images/logo.svg';
 // import { ReactComponent as Picture } from 'images/picture2.svg';
@@ -81,15 +84,22 @@ export const OneCard = () => {
         <span className={css.spanFollowers}>{followersRenderStart},{followersRenderEnd} </span>
         FOLLOWERS
       </p>
+
       {/* //! Trigger button */}
-      <button
+      <ButtonTrigger
+        trigger={triggerOneCard}
+        toggleTrigger={toggleTriggerOneCard}
+        textTrue={"FOLLOWING"}
+        textFalse={"FOLLOW"}
+        inversionBackColor={false}
+      />
+      {/* <button
           type="button"
           className={triggerOneCard ? css.btnFOLLOWING : css.btnFOLLOW}
           onClick={toggleTriggerOneCard}
       >
-        {/* FOLLOW */}
         {triggerOneCard ? "FOLLOWING" : "FOLLOW"}
-      </button>
+      </button> */}
     </div>
   );
 };
