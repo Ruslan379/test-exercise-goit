@@ -14,7 +14,7 @@ import logo from 'images/logo.svg';
 // import { ReactComponent as Picture } from 'images/picture2.svg';
 import picture from 'images/picture2.svg'; 
 // import { ReactComponent as Avatar } from 'images/boy.svg';
-import avatar from 'images/boy.svg'; 
+import avatarBorder from 'images/boy.svg'; 
 import rectangle from 'images/rectangle.svg';
 
 //! DB contacts
@@ -196,7 +196,7 @@ export const CardItem = ({ contacts }) => {
 
   return (
     <>
-      {contacts.map(({ id, user, tweets, followers }) => (
+      {contacts.map(({ id, user, tweets, followers, avatar }) => (
         <li
           key={id}
           className={css.card}>
@@ -213,12 +213,19 @@ export const CardItem = ({ contacts }) => {
                     src={picture}
                     alt="" width="308"
                 />
+          {/* //! avatar Border */}
+          {/* <Avatar className={css.avatar} /> */}
+          <img className={css.avatarBorder}
+            src={avatarBorder}
+            alt=""
+            width="80"
+          />
           {/* //! avatar */}
           {/* <Avatar className={css.avatar} /> */}
           <img className={css.avatar}
-              src={avatar}
+            src={avatar}
             alt=""
-            width="80"
+            width="55"
           />
           {/* //! rectangle */}
           <img className={css.rectangle}

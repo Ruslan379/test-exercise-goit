@@ -43,14 +43,23 @@
     top: 28px;
 }
 
-.avatar {
+.avatarBorder {
     /* height: 80px; */
     /* width: 80px; */
     position: absolute;
     top: 178px;
-    z-index: 99;
+    z-index: 77;
 }
 
+.avatar {
+    /* height: 80px; */
+    /* width: 80px; */
+    position: absolute;
+    top: 186px;
+    z-index: 99;
+    border-radius: 50%;
+    background: linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+}
 
 .rectangle {
     /* height: 80px; */
