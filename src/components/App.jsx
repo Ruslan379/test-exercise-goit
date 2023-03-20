@@ -17,12 +17,13 @@ import useLocalStorage from './hooks/useLocalStorage'; //?
 //! Components
 import { ButtonTrigger } from './ButtonTrigger/ButtonTrigger.jsx';
 import { OneCard } from './OneCard/OneCard.jsx';
-import { CardItem } from './CardItem/CardItem.jsx';
+import { CardsList } from './CardsList/CardsList.jsx';
+// import { CardItem } from './CardItem/CardItem.jsx';
 
 
 
 //! DB contacts
-import contacts from 'db/contacts.json';
+// import contacts from 'db/contacts.json';
 // import contacts2 from 'db/contacts2.json';
 
 import css from './App.module.css';
@@ -125,22 +126,26 @@ export const App = () => {
       >
         {triggerTask ? "One card" : "Many cards"}
       </button> */}
+
+      {/* //! Many cards или One card*/}
+      {triggerTask ? <CardsList /> : <OneCard />}
+
       {/* //! One card */}
-      {!triggerTask && (
+      {/* {!triggerTask && (
           <OneCard />
-      )}
+      )} */}
       {/* //! Many cards */}
-      {triggerTask && (
-        <ul className={css.cardList}>
-          {/* <p>{start}</p> */}
-          <CardItem
-            contacts={contacts}
-          // contacts2={contacts2}
-          // start={start}
-          // toggleTrigger={toggleTrigger}
-          />
-        </ul>
-      )}
+      {/* {triggerTask && (
+        <CardsList />
+        // <ul className={css.cardList}>
+        //   <CardItem
+        //     contacts={contacts}
+        //   // contacts2={contacts2}
+        //   // start={start}
+        //   // toggleTrigger={toggleTrigger}
+        //   />
+        // </ul>
+      )} */}
     </div>
   );
 };
