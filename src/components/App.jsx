@@ -17,7 +17,7 @@ import useLocalStorage from './hooks/useLocalStorage'; //?
 //! Components
 import { ButtonTrigger } from './ButtonTrigger/ButtonTrigger.jsx';
 import { OneCard } from './OneCard/OneCard.jsx';
-import { ContactItem } from './ContactItem/ContactItem.jsx';
+import { CardItem } from './CardItem/CardItem.jsx';
 
 
 
@@ -133,7 +133,7 @@ export const App = () => {
       {triggerTask && (
         <ul className={css.cardList}>
           {/* <p>{start}</p> */}
-          <ContactItem
+          <CardItem
             contacts={contacts}
           // contacts2={contacts2}
           // start={start}

@@ -14,7 +14,7 @@
 // import avatar from 'images/boy.svg'; //?
 // import rectangle from 'images/rectangle.svg'; //?
 
-import {ContactItem} from './ContactItem/ContactItem.jsx';
+import {ContactItem} from './CardItem/CardItem.jsx';
 //! DB contacts
 import contacts from 'db/contacts.json';
 import contacts2 from 'db/contacts2.json';

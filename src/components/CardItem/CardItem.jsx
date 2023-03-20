@@ -20,10 +20,10 @@ import rectangle from 'images/rectangle.svg';
 //! DB contacts
 // import contacts from 'db/contacts.json';
 
-import css from './ContactItem.module.css';
+import css from './CardItem.module.css';
 
 
-export const ContactItem = ({ contacts }) => {
+export const CardItem = ({ contacts }) => {
   // const [contactFollowers, setContactFollowers] = useState(null);
 
   // const [start, setStart] = useState(true);
