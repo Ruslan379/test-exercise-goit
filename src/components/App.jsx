@@ -3,7 +3,7 @@
 //   useEffect
 // } from 'react';
 
-// import useLocalStorage from './hooks/useLocalStorage'; //?
+import useLocalStorage from './hooks/useLocalStorage'; //?
 // import useArrLocalStorage from './hooks/useArrLocalStorage'; //?
 
 //! images
@@ -23,6 +23,13 @@ import css from './App.module.css';
 
 
 export const App = () => {
+  const [triggerTask, setTriggerTask] = useLocalStorage("TriggerTask", false);
+  console.log("triggerTask:", triggerTask); //!
+
+  const toggleTriggerTask = () => {
+    setTriggerTask(!triggerTask);
+  };
+
   // const [start, setStart] = useState(0);
   // let start = 10;
   // console.log("start_ДО:", start); //!
@@ -97,6 +104,14 @@ export const App = () => {
   // console.log("start:", start); //!
   return (
     <div className={css.container}>
+      <button
+          type="button"
+          className={triggerTask ? css.btnOneCard : css.btnManyCards}
+          onClick={toggleTriggerTask}
+      >
+        {triggerTask ? "One card" : "Many cards"}
+      </button>
+
       <ul className={css.cardList}>
         {/* <p>{start}</p> */}
         <ContactItem
