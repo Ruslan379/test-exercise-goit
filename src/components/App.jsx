@@ -15,8 +15,11 @@ import useLocalStorage from './hooks/useLocalStorage'; //?
 // import rectangle from 'images/rectangle.svg'; //?
 
 //! Components
+import { ButtonTrigger } from './ButtonTrigger/ButtonTrigger.jsx';
+import { OneCard } from './OneCard/OneCard.jsx';
 import { ContactItem } from './ContactItem/ContactItem.jsx';
-import { OneCard } from './OneCard/OneCard.jsx'
+
+
 
 //! DB contacts
 import contacts from 'db/contacts.json';
@@ -27,7 +30,7 @@ import css from './App.module.css';
 
 export const App = () => {
   const [triggerTask, setTriggerTask] = useLocalStorage("TriggerTask", false);
-  console.log("triggerTask:", triggerTask); //!
+  console.log("App-->triggerTask:", triggerTask); //!
 
   const toggleTriggerTask = () => {
     setTriggerTask(!triggerTask);
@@ -107,13 +110,20 @@ export const App = () => {
   // console.log("start:", start); //!
   return (
     <div className={css.container}>
-      <button
+      <ButtonTrigger
+        trigger={triggerTask}
+        toggleTrigger={toggleTriggerTask}
+        textTrue={"One card"}
+        textFalse={"Many cards"}
+        inversionBackColor={true}
+      />
+      {/* <button
           type="button"
           className={triggerTask ? css.btnOneCard : css.btnManyCards}
           onClick={toggleTriggerTask}
       >
         {triggerTask ? "One card" : "Many cards"}
-      </button>
+      </button> */}
 
       {!triggerTask && (
           <OneCard />
