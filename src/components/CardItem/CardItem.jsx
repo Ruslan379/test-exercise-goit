@@ -21,7 +21,19 @@ import rectangle from 'images/rectangle.svg';
 //! DB contacts
 // import contacts from 'db/contacts.json';
 
-import css from './CardItem.module.css';
+// import css from './CardItem.module.css';
+
+import {
+  Card,
+  Logo,
+  // BackgroundPicture, //! Not used
+  RoundFrameAvatar, 
+  Avatar,
+  Rectangle,
+  UserName, 
+  Tweets,
+  Followers
+} from './CardItem.styled';
 
 
 export const CardItem = ({ contacts }) => {
@@ -198,11 +210,9 @@ export const CardItem = ({ contacts }) => {
   return (
     <>
       {contacts.map(({ id, user, tweets, followers, avatar }) => (
-        <li
-          key={id}
-          className={css.card}>
-          {/* //! logo */}
-          <img className={css.logo}
+        <Card key={id}>
+                    {/* //! logo */}
+          <Logo
             alt="first logo"
             src={logo}
             width="76"
@@ -213,8 +223,16 @@ export const CardItem = ({ contacts }) => {
             src={picture}
             width="308"
           /> */}
+          {/* //! rectangle */}
+          <Rectangle
+            alt="rectangle"
+            src={rectangle}
+            width="380"
+          />
           {/* //! ellipse */}
-          <Ellipse className={css.ellipse} />
+          <RoundFrameAvatar>
+            <Ellipse />
+          </RoundFrameAvatar>
           {/* //! avatar Border */}
           {/* <img className={css.avatarBorder}
             alt="avatar border"
@@ -222,33 +240,26 @@ export const CardItem = ({ contacts }) => {
             width="80"
           /> */}
           {/* //! avatar */}
-          <img className={css.avatar}
+          <Avatar
             alt={user}
             src={avatar}
             width="63"
           />
           {/* //! rectangle */}
-          <img className={css.rectangle}
+          {/* <img className={css.rectangle}
             alt="rectangle"
             src={rectangle}
             width="380"
-          />
+          /> */}
           {/* //! user name */}
-          <p className={css.userName}
-          >
-            {user}
-          </p>
+          <UserName>{user}</UserName>
           {/* //! tweets */}
-          <p className={css.tweets}
-          >
-            {tweets} tweets
-          </p>
+          <Tweets>{tweets} tweets</Tweets>
           {/* //! FOLLOWERS */}
-          <p className={css.followers}
-          >
+          <Followers>
               {/* <span className={css.spanFollowers}>{followersRenderStart},{followersRenderEnd} </span> */}
             {/* <span className={css.spanFollowers}>{followers.toString().slice(0, -3)},{followers.toString().slice(-3)}</span> */}
-            <span className={css.spanFollowers}>{followers.toString().slice(0, -3)},{arrTrigger[id - 1] ? (followers + 1).toString().slice(-3) : followers.toString().slice(-3)}</span>
+            <span>{followers.toString().slice(0, -3)},{arrTrigger[id - 1] ? (followers + 1).toString().slice(-3) : followers.toString().slice(-3)}</span>
             {/* <span className={css.spanFollowers}>{followers.toString().slice(0, -3)},{arrTrigger[id-1] ? followers.toString().slice(-3) : followers.toString().slice(-3)}</span> */}
             {/* <span
               className={css.spanFollowers}
@@ -263,7 +274,7 @@ export const CardItem = ({ contacts }) => {
               }
             </span> */}
               &nbsp;FOLLOWERS
-          </p>
+          </Followers>
           {/* //! Trigger button */}
           <ButtonTrigger
             trigger={arrTrigger[id-1]}
@@ -279,8 +290,101 @@ export const CardItem = ({ contacts }) => {
           >
             {arrTrigger[id-1] ? "FOLLOWING" : "FOLLOW"}
           </button> */}
-        </li>
+        </Card>
       ))}
     </>
   );
 };
+
+
+
+
+//todo OLD
+// return (
+//     <>
+//       {contacts.map(({ id, user, tweets, followers, avatar }) => (
+//         <li
+//           key={id}
+//           className={css.card}>
+//           {/* //! logo */}
+//           <img className={css.logo}
+//             alt="first logo"
+//             src={logo}
+//             width="76"
+//           />
+//           {/* //! picture */}
+//           {/* <img className={css.picture}
+//             alt="background"
+//             src={picture}
+//             width="308"
+//           /> */}
+//           {/* //! ellipse */}
+//           <Ellipse className={css.ellipse} />
+//           {/* //! avatar Border */}
+//           {/* <img className={css.avatarBorder}
+//             alt="avatar border"
+//             src={avatarBorder}
+//             width="80"
+//           /> */}
+//           {/* //! avatar */}
+//           <img className={css.avatar}
+//             alt={user}
+//             src={avatar}
+//             width="63"
+//           />
+//           {/* //! rectangle */}
+//           <img className={css.rectangle}
+//             alt="rectangle"
+//             src={rectangle}
+//             width="380"
+//           />
+//           {/* //! user name */}
+//           <p className={css.userName}
+//           >
+//             {user}
+//           </p>
+//           {/* //! tweets */}
+//           <p className={css.tweets}
+//           >
+//             {tweets} tweets
+//           </p>
+//           {/* //! FOLLOWERS */}
+//           <p className={css.followers}
+//           >
+//               {/* <span className={css.spanFollowers}>{followersRenderStart},{followersRenderEnd} </span> */}
+//             {/* <span className={css.spanFollowers}>{followers.toString().slice(0, -3)},{followers.toString().slice(-3)}</span> */}
+//             <span className={css.spanFollowers}>{followers.toString().slice(0, -3)},{arrTrigger[id - 1] ? (followers + 1).toString().slice(-3) : followers.toString().slice(-3)}</span>
+//             {/* <span className={css.spanFollowers}>{followers.toString().slice(0, -3)},{arrTrigger[id-1] ? followers.toString().slice(-3) : followers.toString().slice(-3)}</span> */}
+//             {/* <span
+//               className={css.spanFollowers}
+//             >
+//               {arrTrigger[id - 1] 
+//                 ?
+//                 // [followers.toString().slice(0, -3), (followers + 1).toString().slice(-3)]
+//                 followersRenderAllTrue
+//                 :
+//                 // [followers.toString().slice(0, -3), followers.toString().slice(-3)]
+//                 followersRenderAllFalse
+//               }
+//             </span> */}
+//               &nbsp;FOLLOWERS
+//           </p>
+//           {/* //! Trigger button */}
+//           <ButtonTrigger
+//             trigger={arrTrigger[id-1]}
+//             toggleTrigger={() => {toggleTrigger(id)}}
+//             textTrue={"FOLLOWING"}
+//             textFalse={"FOLLOW"}
+//             inversionBackColor={false}
+//           />
+//           {/* <button
+//             type="button"
+//             className={arrTrigger[id-1] ? css.btnFOLLOWING : css.btnFOLLOW}
+//             onClick={() => {toggleTrigger(id)}}
+//           >
+//             {arrTrigger[id-1] ? "FOLLOWING" : "FOLLOW"}
+//           </button> */}
+//         </li>
+//       ))}
+//     </>
+//   );

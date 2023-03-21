@@ -39,7 +39,7 @@ export const OneCard = () => {
   const [triggerOneCard, setTriggerOneCard] = useLocalStorage("TriggerOneCard", false);
   console.log("triggerOneCard:", triggerOneCard); //!
 
-  
+
   //! Input data
   const tweets = 777;
   let followers = 100500;
@@ -98,7 +98,6 @@ export const OneCard = () => {
       <RoundFrameAvatar>
         <Ellipse />
       </RoundFrameAvatar>
-      
       {/* <img className={css.ellipse}
         alt="ellipse"
         src={ellipse}
@@ -121,8 +120,8 @@ export const OneCard = () => {
       <Tweets>{tweets} tweets</Tweets>
       {/* //! FOLLOWERS */}
       <Followers>
-        <span>{followersRenderStart},{followersRenderEnd} </span>
-        FOLLOWERS
+        <span>{followersRenderStart},{followersRenderEnd}</span>
+        &nbsp;FOLLOWERS
       </Followers>
 
       {/* //! Trigger button */}
