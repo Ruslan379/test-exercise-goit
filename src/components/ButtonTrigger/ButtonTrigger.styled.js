@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+
+
 export const Button = styled.button`
     width: 196px;
     height: 50px;
@@ -14,10 +16,10 @@ export const Button = styled.button`
     font-size: 18px;
     font-weight: 600;
 
-    border: none;
     cursor: pointer;
     outline: none;
 
+    border: none;
     border-radius: 10.3108px;
     box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
 
@@ -29,13 +31,15 @@ export const Button = styled.button`
 
     scale: 1;
     transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* :hover, :focus  { */ //! так "залипает" hover
     :hover {
-    scale: 1.03;
-    /* background-color: #e2c7ff; */
-    background-color: ${p => {
+        scale: 1.03;
+        /* background-color: #e2c7ff; */
+        background-color: ${p => {
         return p.triggerColor ? "#20b37d" : "#e0c3ff";
     }};
-}
+    }
 `;
 
 
