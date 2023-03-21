@@ -26,7 +26,11 @@ import { CardsList } from './CardsList/CardsList.jsx';
 // import contacts from 'db/contacts.json';
 // import contacts2 from 'db/contacts2.json';
 
-import css from './App.module.css';
+// import css from './App.module.css';
+
+import {
+  Container
+} from './App.styled';
 
 
 export const App = () => {
@@ -110,7 +114,8 @@ export const App = () => {
 
   // console.log("start:", start); //!
   return (
-    <div className={css.container}>
+    <Container>
+    {/* //? <div className={css.container}> */}
       {/* //! Trigger button */}
       <ButtonTrigger
         trigger={triggerTask}
@@ -146,6 +151,7 @@ export const App = () => {
         //   />
         // </ul>
       )} */}
-    </div>
+      {/* //? </div> */}
+      </Container>
   );
 };
