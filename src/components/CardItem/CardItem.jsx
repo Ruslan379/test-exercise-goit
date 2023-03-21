@@ -200,37 +200,34 @@ export const CardItem = ({ contacts }) => {
         <li
           key={id}
           className={css.card}>
-            {/* //! logo */}
-          {/* <p>{contacts2[0]}</p> */}
+          {/* //! logo */}
           <img className={css.logo}
-              src={logo}
-            alt=""
+            alt="first logo"
+            src={logo}
             width="76"
           />
           {/* //! picture */}
-          {/* <Picture className={css.picture} /> */}
           <img className={css.picture}
-                    src={picture}
-                    alt="" width="308"
-                />
+            alt="second logo"
+            src={picture}
+            width="308"
+          />
           {/* //! avatar Border */}
-          {/* <Avatar className={css.avatar} /> */}
           <img className={css.avatarBorder}
+            alt="avatar border"
             src={avatarBorder}
-            alt=""
             width="80"
           />
           {/* //! avatar */}
-          {/* <Avatar className={css.avatar} /> */}
           <img className={css.avatar}
+            alt={user}
             src={avatar}
-            alt=""
             width="55"
           />
           {/* //! rectangle */}
           <img className={css.rectangle}
+            alt="rectangle"
             src={rectangle}
-            alt=""
             width="380"
           />
           {/* //! user name */}

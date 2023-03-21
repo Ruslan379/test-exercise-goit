@@ -8,7 +8,15 @@ import logo from 'images/logo.svg';
 // import { ReactComponent as Picture } from 'images/picture2.svg';
 import picture from 'images/picture2.svg'; 
 // import { ReactComponent as Avatar } from 'images/boy.svg';
-import avatar from 'images/boy.svg'; 
+
+
+// import ellipse from 'images/ellipse.svg';
+import { ReactComponent as Ellipse } from 'images/ellipse.svg';
+
+// import avatar from 'images/boy.svg'; 
+import avatar from 'images/avatar.svg';
+
+
 import rectangle from 'images/rectangle.svg'; 
 
 import css from './OneCard.module.css';
@@ -50,27 +58,35 @@ export const OneCard = () => {
     <div className={css.card}>
       {/* //! logo */}
       <img className={css.logo}
-          src={logo}
-        alt=""
+        alt="first logo"
+        src={logo}
         width="76"
       />
       {/* //! picture */}
       {/* <Picture className={css.picture} /> */}
       <img className={css.picture}
-                src={picture}
-                alt="" width="308"
-            />
+        alt="second logo"
+        src={picture}
+        width="308"
+      />
+      {/* //! ellipse */}
+      <Ellipse className={css.ellipse} />
+      {/* <img className={css.ellipse}
+        alt="ellipse"
+        src={ellipse}
+        width="80"
+      /> */}
       {/* //! avatar */}
       {/* <Avatar className={css.avatar} /> */}
       <img className={css.avatar}
-          src={avatar}
-        alt=""
-        width="80"
+        alt="avatar"
+        src={avatar}
+        width="63"
       />
       {/* //! rectangle */}
       <img className={css.rectangle}
-          src={rectangle}
-        alt=""
+        alt="rectangle"
+        src={rectangle}
         width="380"
       />
       {/* //! tweets */}
