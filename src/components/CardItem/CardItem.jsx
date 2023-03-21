@@ -36,6 +36,7 @@ import {
 } from './CardItem.styled';
 
 
+
 export const CardItem = ({ contacts }) => {
   // const [contactFollowers, setContactFollowers] = useState(null);
 
@@ -207,11 +208,15 @@ export const CardItem = ({ contacts }) => {
     //     return null;  
     // }
 
+  // let imgSrc = "";
+  
+    
   return (
     <>
       {contacts.map(({ id, user, tweets, followers, avatar }) => (
+        // imgSrc = `https://cdn-icons-png.flaticon.com/512/${avatar}`,
         <Card key={id}>
-                    {/* //! logo */}
+          {/* //! logo */}
           <Logo
             alt="first logo"
             src={logo}
