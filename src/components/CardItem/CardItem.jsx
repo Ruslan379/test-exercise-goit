@@ -13,7 +13,7 @@ import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
 // import avatarBorder from 'images/boy.svg'; 
 //! ----- images
 import logo from 'images/logo.svg';
-import picture from 'images/picture.svg';
+// import picture from 'images/picture.svg';
 import { ReactComponent as Ellipse } from 'images/ellipse.svg';
 import rectangle from 'images/rectangle.svg'; 
 //! _____ images
@@ -208,11 +208,11 @@ export const CardItem = ({ contacts }) => {
             width="76"
           />
           {/* //! picture */}
-          <img className={css.picture}
+          {/* <img className={css.picture}
             alt="background"
             src={picture}
             width="308"
-          />
+          /> */}
           {/* //! ellipse */}
           <Ellipse className={css.ellipse} />
           {/* //! avatar Border */}
