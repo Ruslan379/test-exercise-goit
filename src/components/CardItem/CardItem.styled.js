@@ -84,6 +84,7 @@ export const Rectangle = styled.img`
 `;
 
 export const UserName = styled.p`
+    font-weight: 600;
     position: absolute;
         top: 259px;
         color: #ba8bf8;
