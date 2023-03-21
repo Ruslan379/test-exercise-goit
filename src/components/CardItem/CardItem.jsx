@@ -3,6 +3,8 @@ import {
   useEffect
 } from 'react';
 
+import PropTypes from 'prop-types';
+
 // import useLocalStorage from '../hooks/useLocalStorage';
 // import useArrLocalStorage from '../hooks/useArrLocalStorage'; //?
 
@@ -301,7 +303,9 @@ export const CardItem = ({ contacts }) => {
   );
 };
 
-
+CardItem.propTypes = {
+  contacts: PropTypes.array.isRequired,
+};
 
 
 //todo OLD
