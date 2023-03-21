@@ -4,13 +4,20 @@ import { CardItem } from '../CardItem/CardItem.jsx';
 //! DB contacts
 import contacts from 'db/contacts.json';
 
-import css from './CardsList.module.css';
+// import css from './CardsList.module.css';
+
+import {
+  CardsListContainer
+} from './CardsList.styled.js';
 
 
 export const CardsList = () => {
   return (
-        <ul className={css.cardList}>
+      <CardsListContainer>
           <CardItem contacts={contacts}/>
-        </ul>
+      </CardsListContainer>
+      // <ul className={css.cardList}>
+      //   <CardItem contacts={contacts}/>
+      // </ul>
   );
 };
