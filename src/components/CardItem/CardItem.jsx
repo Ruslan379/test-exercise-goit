@@ -10,12 +10,13 @@ import {
 import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
 
 //! images
+// import avatarBorder from 'images/boy.svg'; 
+//! ----- images
 import logo from 'images/logo.svg';
-// import { ReactComponent as Picture } from 'images/picture2.svg';
-import picture from 'images/picture.svg'; 
-// import { ReactComponent as Avatar } from 'images/boy.svg';
-import avatarBorder from 'images/boy.svg'; 
-import rectangle from 'images/rectangle.svg';
+import picture from 'images/picture.svg';
+import { ReactComponent as Ellipse } from 'images/ellipse.svg';
+import rectangle from 'images/rectangle.svg'; 
+//! _____ images
 
 //! DB contacts
 // import contacts from 'db/contacts.json';
@@ -212,17 +213,19 @@ export const CardItem = ({ contacts }) => {
             src={picture}
             width="308"
           />
+          {/* //! ellipse */}
+      <Ellipse className={css.ellipse} />
           {/* //! avatar Border */}
-          <img className={css.avatarBorder}
+          {/* <img className={css.avatarBorder}
             alt="avatar border"
             src={avatarBorder}
             width="80"
-          />
+          /> */}
           {/* //! avatar */}
           <img className={css.avatar}
             alt={user}
             src={avatar}
-            width="55"
+            width="63"
           />
           {/* //! rectangle */}
           <img className={css.rectangle}
