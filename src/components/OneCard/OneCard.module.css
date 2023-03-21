@@ -34,7 +34,7 @@
             background-position-y: 28px, center;
 }
 
-.backImage {
+.backImage1 {
     background-image: url("../../images/picture.svg");
         background-repeat: no-repeat;
         background-size: 308px 168px;
@@ -42,6 +42,17 @@
         background-position-x: center;
         background-position-y: 28px;
 }
+
+/* ! доп. стиль для  <div className={`${css.backImage} ${css.card}`}>*/
+.backImage {
+    background-image: url("../../images/picture.svg"),
+        linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
+            background-repeat: no-repeat;
+            background-size: 308px 168px, cover;
+            background-position-x: center;
+            background-position-y: 28px, center;
+}
+
 
 .logo {
     /* height: 22px; */

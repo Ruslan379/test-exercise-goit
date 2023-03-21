@@ -56,6 +56,7 @@ export const OneCard = () => {
 
   
   return (
+    // <div className={`${css.backImage} ${css.card}`}>
     <div className={css.card}>
       {/* //! logo */}
       <img className={css.logo}
