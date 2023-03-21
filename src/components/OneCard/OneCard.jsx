@@ -7,7 +7,7 @@ import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
 import logo from 'images/logo.svg';
 
 // import { ReactComponent as Picture } from 'images/picture2.svg';
-import picture from 'images/picture.svg';
+// import picture from 'images/picture.svg';
 
 // import ellipse from 'images/ellipse.svg';
 import { ReactComponent as Ellipse } from 'images/ellipse.svg';
@@ -65,11 +65,11 @@ export const OneCard = () => {
       />
       {/* //! picture */}
       {/* <Picture className={css.picture} /> */}
-      <img className={css.picture}
+      {/* <img className={css.picture}
         alt="background"
         src={picture}
         width="308"
-      />
+      /> */}
       {/* //! ellipse */}
       <Ellipse className={css.ellipse} />
       {/* <img className={css.ellipse}
