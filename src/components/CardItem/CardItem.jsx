@@ -12,7 +12,7 @@ import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
 //! images
 import logo from 'images/logo.svg';
 // import { ReactComponent as Picture } from 'images/picture2.svg';
-import picture from 'images/picture2.svg'; 
+import picture from 'images/picture.svg'; 
 // import { ReactComponent as Avatar } from 'images/boy.svg';
 import avatarBorder from 'images/boy.svg'; 
 import rectangle from 'images/rectangle.svg';

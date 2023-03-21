@@ -3,21 +3,22 @@ import useLocalStorage from '../hooks/useLocalStorage';
 //! Components
 import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
 
-//! images
+//! ----- images
 import logo from 'images/logo.svg';
-// import { ReactComponent as Picture } from 'images/picture2.svg';
-import picture from 'images/picture2.svg'; 
-// import { ReactComponent as Avatar } from 'images/boy.svg';
 
+// import { ReactComponent as Picture } from 'images/picture2.svg';
+import picture from 'images/picture.svg';
 
 // import ellipse from 'images/ellipse.svg';
 import { ReactComponent as Ellipse } from 'images/ellipse.svg';
 
+// import { ReactComponent as Avatar } from 'images/boy.svg';
 // import avatar from 'images/boy.svg'; 
 import avatar from 'images/avatar.svg';
 
-
 import rectangle from 'images/rectangle.svg'; 
+//! _____ images
+
 
 import css from './OneCard.module.css';
 
