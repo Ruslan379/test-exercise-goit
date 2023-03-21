@@ -30,7 +30,7 @@
         linear-gradient(114.99deg, #471CA9 -0.99%, #5736A3 54.28%, #4B2A99 78.99%);
             background-repeat: no-repeat;
             background-size: 308px 168px, cover;
-            background-position-x: 36px, center;
+            background-position-x: center;
             background-position-y: 28px, center;
 }
 
@@ -39,7 +39,7 @@
         background-repeat: no-repeat;
         background-size: 308px 168px;
         background-position: absolute;
-        background-position-x: 36px;
+        background-position-x: center;
         background-position-y: 28px;
 }
 
