@@ -16,7 +16,7 @@ import { ReactComponent as Ellipse } from 'images/ellipse.svg';
 // import avatar from 'images/boy.svg'; 
 import avatar from 'images/avatar.svg';
 
-import rectangle from 'images/rectangle.svg'; 
+// import rectangle from 'images/rectangle.svg';  //! Not used
 //! _____ images
 
 // import css from './OneCard.module.css';
@@ -27,7 +27,8 @@ import {
   // BackgroundPicture, //! Not used
   RoundFrameAvatar, 
   Avatar,
-  Rectangle,
+  // Rectangle, //! Not used
+  HorizontalLine,
   // UserName, //! Not used
   Tweets,
   Followers
@@ -89,11 +90,13 @@ export const OneCard = () => {
         width="308"
       /> */}
       {/* //! rectangle */}
-      <Rectangle
+      {/* <Rectangle
         alt="rectangle"
         src={rectangle}
         width="380"
-      />
+      /> */}
+      {/* //! orizontalLine */}
+      <HorizontalLine />
       {/* //! ellipse */}
       <RoundFrameAvatar>
         <Ellipse />
