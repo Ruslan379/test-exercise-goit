@@ -121,7 +121,7 @@ export const App = () => {
         trigger={triggerTask}
         toggleTrigger={toggleTriggerTask}
         textTrue={"One card"}
-        textFalse={"Many cards"}
+        textFalse={"Cards list"}
         inversionBackColor={true}
       />
       {/* <button
