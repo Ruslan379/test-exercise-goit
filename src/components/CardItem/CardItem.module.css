@@ -55,8 +55,8 @@
     /* height: 80px; */
     /* width: 80px; */
     position: absolute;
-    top: 178px;
-    z-index: 99;
+        top: 178px;
+        z-index: 99;
 }
 
 .avatar {
@@ -75,7 +75,7 @@
     /* height: 80px; */
     /* width: 80px; */
     position: absolute;
-    top: 214px;
+        top: 214px;
 }
 
 

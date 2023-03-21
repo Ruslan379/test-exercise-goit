@@ -209,12 +209,12 @@ export const CardItem = ({ contacts }) => {
           />
           {/* //! picture */}
           <img className={css.picture}
-            alt="second logo"
+            alt="background"
             src={picture}
             width="308"
           />
           {/* //! ellipse */}
-      <Ellipse className={css.ellipse} />
+          <Ellipse className={css.ellipse} />
           {/* //! avatar Border */}
           {/* <img className={css.avatarBorder}
             alt="avatar border"

@@ -66,7 +66,7 @@ export const OneCard = () => {
       {/* //! picture */}
       {/* <Picture className={css.picture} /> */}
       <img className={css.picture}
-        alt="second logo"
+        alt="background"
         src={picture}
         width="308"
       />
