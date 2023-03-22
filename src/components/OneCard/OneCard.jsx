@@ -28,7 +28,7 @@ import {
   RoundFrameAvatar, 
   Avatar,
   // Rectangle, //! Not used
-  HorizontalLine,
+  // HorizontalLine, //! Not used
   // UserName, //! Not used
   Tweets,
   Followers
@@ -96,7 +96,7 @@ export const OneCard = () => {
         width="380"
       /> */}
       {/* //! orizontalLine */}
-      <HorizontalLine />
+      {/* <HorizontalLine /> */}
       {/* //! ellipse */}
       <RoundFrameAvatar>
         <Ellipse />

@@ -17,7 +17,7 @@ import { ButtonTrigger } from '../ButtonTrigger/ButtonTrigger.jsx';
 import logo from 'images/logo.svg';
 // import picture from 'images/picture.svg';
 import { ReactComponent as Ellipse } from 'images/ellipse.svg';
-import rectangle from 'images/rectangle.svg'; 
+// import rectangle from 'images/rectangle.svg';  //! Not used
 //! _____ images
 
 //! DB contacts
@@ -32,7 +32,7 @@ import {
   RoundFrameAvatar, 
   Avatar,
   // Rectangle, //! Not used
-  HorizontalLine,
+  // HorizontalLine, //! Not used
   UserName, 
   Tweets,
   Followers
@@ -238,7 +238,7 @@ export const CardItem = ({ contacts }) => {
             width="380"
           /> */}
           {/* //! orizontalLine */}
-          <HorizontalLine />
+          {/* <HorizontalLine /> */}
           {/* //! ellipse */}
           <RoundFrameAvatar>
             <Ellipse />
