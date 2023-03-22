@@ -31,7 +31,8 @@ import {
   // BackgroundPicture, //! Not used
   RoundFrameAvatar, 
   Avatar,
-  Rectangle,
+  // Rectangle, //! Not used
+  HorizontalLine,
   UserName, 
   Tweets,
   Followers
@@ -231,11 +232,13 @@ export const CardItem = ({ contacts }) => {
             width="308"
           /> */}
           {/* //! rectangle */}
-          <Rectangle
+          {/* <Rectangle
             alt="rectangle"
             src={rectangle}
             width="380"
-          />
+          /> */}
+          {/* //! orizontalLine */}
+          <HorizontalLine />
           {/* //! ellipse */}
           <RoundFrameAvatar>
             <Ellipse />

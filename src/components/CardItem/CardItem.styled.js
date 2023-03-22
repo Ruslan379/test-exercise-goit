@@ -45,11 +45,13 @@ export const Card = styled.li`
             background-position-y: 28px, center;
 `;
 
+
 export const Logo = styled.img`
     position: absolute;
         top: 20px;
         left: 20px;
 `;
+
 
 //! Not used
 export const BackgroundPicture = styled.img`
@@ -57,13 +59,35 @@ export const BackgroundPicture = styled.img`
     width: 308px;
     position: absolute;
     top: 28px;
+    
 `;
+
+
+//! Not used
+export const Rectangle = styled.img`
+    position: absolute;
+        top: 214px;
+`;
+
+
+export const HorizontalLine = styled.div`
+    width: 380px;
+    height: 8px;
+    position: absolute;
+        top: 214px;
+    background: #EBD8FF;
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+        inset 0px -1.71846px 3.43693px #ae7be3, 
+        inset 0px 3.43693px 2.5777px #fbf8ff;
+`;
+
 
 export const RoundFrameAvatar = styled.div`
     position: absolute;
     top: 178px;
     z-index: 99;
 `;
+
 
 export const Avatar = styled.img`
     position: absolute;
@@ -78,10 +102,6 @@ export const Avatar = styled.img`
             );
 `;
 
-export const Rectangle = styled.img`
-    position: absolute;
-        top: 214px;
-`;
 
 export const UserName = styled.p`
     font-weight: 600;
@@ -90,9 +110,11 @@ export const UserName = styled.p`
         color: #ba8bf8;
 `;
 
+
 export const Tweets = styled.p`
     margin-top: 284px;
 `;
+
 
 export const Followers = styled.p`
     margin-top: 16px;
