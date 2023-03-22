@@ -9,7 +9,7 @@ export const Card = styled.div`
 
     height: 460px;
     width: 380px;
-    margin-top: 40px;
+    margin-top: 80px;
 
     display: flex;
     flex-direction: column;
@@ -97,23 +97,71 @@ export const HorizontalLine = styled.div`
 
 
 export const RoundFrameAvatar = styled.div`
+    height: 80px;
+    width: 80px;
     position: absolute;
-    top: 178px;
-    z-index: 99;
-`;
-
-
-export const Avatar = styled.img`
-    position: absolute;
-    top: 187px;
-    z-index: 77;
+    top: 177px;
+    /* z-index: 99; */
+    border: 8px solid #EBD8FF;
+    /* border: 8px solid; */
     border-radius: 50%;
+    /* border-color: #EBD8FF; */
+    
+    /* box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), 
+        0px -2.19582px 4.39163px #AE7BE3, 
+        0px 4.39163px 3.29372px #FBF8FF; */
+
+    /* background: #EBD8FF; */
+    /* box-shadow: 1px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+        0px -1.71846px 13.43693px #ae7be3, 
+        0px 3.43693px 2.5777px #fbf8ff; */
+
+    /* background: #5736a3; */
+    /* background: linear-gradient(
+            114.99deg, 
+            #471CA9 -0.99%, 
+            #5736A3 54.28%, 
+            #4B2A99 78.99%
+            ); */
+
+    ::before {
+    content: '';
+    position: absolute;
+        top: 1px;
+        left: 1px;
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    background: #EBD8FF;
     background: linear-gradient(
             114.99deg, 
             #471CA9 -0.99%, 
             #5736A3 54.28%, 
             #4B2A99 78.99%
             );
+    box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
+        1px -1.71846px 5px #ae7be3, 
+        1px 3.28154px 5px #ae7be3,
+        0px 1.28154px 5px #ae7be3,
+        1px -3.28154px 5px #ae7be3,
+        -1px -0.28154px 5px #ae7be3,
+        0px 3.43693px 2.5777px #fbf8ff;
+    }
+`;
+
+
+export const Avatar = styled.img`
+    position: absolute;
+        top: 2px;
+        left: 1px;
+    z-index: 77;
+    border-radius: 50%;
+    /* background: linear-gradient(
+            114.99deg, 
+            #471CA9 -0.99%, 
+            #5736A3 54.28%, 
+            #4B2A99 78.99%
+            ); */
 `;
 
 

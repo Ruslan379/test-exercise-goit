@@ -10,7 +10,7 @@ import logo from 'images/logo.svg';
 // import picture from 'images/picture.svg';
 
 // import ellipse from 'images/ellipse.svg';
-import { ReactComponent as Ellipse } from 'images/ellipse.svg';
+// import { ReactComponent as Ellipse } from 'images/ellipse.svg'; //! Not used
 
 // import { ReactComponent as Avatar } from 'images/boy.svg';
 // import avatar from 'images/boy.svg'; 
@@ -99,7 +99,13 @@ export const OneCard = () => {
       {/* <HorizontalLine /> */}
       {/* //! ellipse */}
       <RoundFrameAvatar>
-        <Ellipse />
+        {/* <Ellipse /> */}
+        {/* //! avatar */}
+        <Avatar
+        alt="avatar"
+        src={avatar}
+        width="62"
+      />
       </RoundFrameAvatar>
       {/* <img className={css.ellipse}
         alt="ellipse"
@@ -108,11 +114,11 @@ export const OneCard = () => {
       /> */}
       {/* //! avatar */}
       {/* <Avatar className={css.avatar} /> */}
-      <Avatar
+      {/* <Avatar
         alt="avatar"
         src={avatar}
         width="63"
-      />
+      /> */}
       {/* //! rectangle */}
       {/* <Rectangle
         alt="rectangle"
