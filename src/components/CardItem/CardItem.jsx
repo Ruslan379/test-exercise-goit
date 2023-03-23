@@ -211,13 +211,14 @@ export const CardItem = ({ contacts }) => {
     //     return null;  
     // }
 
-  // let imgSrc = "";
   
-    
   return (
     <>
-      {contacts.map(({ id, user, tweets, followers, avatar }) => (
-        // imgSrc = `https://cdn-icons-png.flaticon.com/512/${avatar}`,
+      {/* {contacts.map(({ id, user, tweets, followers, avatar }) => ( */}
+      {contacts.map((contact) => {
+        const { id, user, tweets, followers, avatar } = contact;
+        // const imgUrl = `https://cdn-icons-png.flaticon.com/512/${avatar}`;
+        return (
         <Card key={id}>
           {/* //! logo */}
           <Logo
@@ -301,7 +302,8 @@ export const CardItem = ({ contacts }) => {
             {arrTrigger[id-1] ? "FOLLOWING" : "FOLLOW"}
           </button> */}
         </Card>
-      ))}
+      // ))}
+      )})}
     </>
   );
 };
