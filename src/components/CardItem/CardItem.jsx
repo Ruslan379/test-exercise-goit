@@ -52,7 +52,7 @@ export const CardItem = ({ contacts }) => {
   //! DB contacts + length
   // console.log("contacts --> ContactItem:", contacts); //!
   const contactsLength = contacts.length;
-  console.log("contactsLength:", contactsLength); //!
+  console.log("CardItem-->contactsLength:", contactsLength); //!
 
 
   // const [arrTrigger, setArrTrigger] = useArrLocalStorage("ArrFollowers", arrFollowers);
@@ -87,7 +87,7 @@ export const CardItem = ({ contacts }) => {
   );
 
   //! Дополнительный триггер (для перерендования)
-  const [trigger, setTrigger] = useState(false); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  // const [trigger, setTrigger] = useState(false); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
   //! Пишем в Local Storage весь Массив-Триггер (arrTrigger)
@@ -97,7 +97,8 @@ export const CardItem = ({ contacts }) => {
 
     const localStorageGet = JSON.parse(localStorage.getItem("ArrFollowers"))
     console.log("ЧТЕНИЕ из Local Storage:", localStorageGet); //!
-  }, [arrTrigger, contacts]);
+  }, [arrTrigger]);
+  // }, [arrTrigger, contacts]);
   // });
 
   // useEffect(() => {
@@ -105,7 +106,7 @@ export const CardItem = ({ contacts }) => {
   // }, [trigger]);
 
 
-  console.log("arrTrigger ПОСЛЕ:", arrTrigger); //!
+  console.log("CardItem-->arrTrigger_ПОСЛЕ:", arrTrigger); //!
 
 
   //?----------------------------------------------------------------
@@ -200,8 +201,15 @@ export const CardItem = ({ contacts }) => {
       //       console.log(`contacts[${idNumber}].followers`, contacts[idNumber].followers); //!
       //   };
       
-      setArrTrigger(arrTrigger);
-      setTrigger(!trigger);
+      //* Так перерендеривается!!!
+      setArrTrigger(prevArrTrigger => {
+        return [...prevArrTrigger]
+      });
+
+      // setArrTrigger(arrTrigger); //! Так не перерендеривается, нужен Дополнительный триггер (ниже)
+      //! Дополнительный триггер (для перерендования) --> уже не нужен
+      // setTrigger(!trigger); //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
       localStorage.setItem("ArrFollowers", JSON.stringify(arrTrigger));
       return 
     }
