@@ -25,7 +25,7 @@ import {
   Card,
   Logo,
   // BackgroundPicture, //! Not used
-  RoundFrameAvatar, 
+  // RoundFrameAvatar, 
   Avatar,
   // Rectangle, //! Not used
   // HorizontalLine, //! Not used
@@ -98,7 +98,7 @@ export const OneCard = () => {
       {/* //! orizontalLine */}
       {/* <HorizontalLine /> */}
       {/* //! ellipse */}
-      <RoundFrameAvatar>
+      {/* <RoundFrameAvatar> */}
         {/* <Ellipse /> */}
         {/* //! avatar */}
         <Avatar
@@ -106,7 +106,7 @@ export const OneCard = () => {
         src={avatar}
         width="62"
       />
-      </RoundFrameAvatar>
+      {/* </RoundFrameAvatar> */}
       {/* <img className={css.ellipse}
         alt="ellipse"
         src={ellipse}

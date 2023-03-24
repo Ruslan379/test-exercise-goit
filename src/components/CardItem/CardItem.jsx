@@ -187,9 +187,11 @@ export const CardItem = ({ contacts }) => {
       const idNumber = Number(id) - 1;
       console.log("idNumber:", idNumber); //!
 
-      // console.log(`toggleTrigger --> arrTrigger[${idNumber}]_ДО:`, arrTrigger[idNumber]); //!
-      // arrTrigger[idNumber] = !arrTrigger[idNumber];
-      // console.log(`toggleTrigger --> arrTrigger[${idNumber}]_ПОСЛЕ:`, arrTrigger[idNumber]); //!
+      //* -------- Так перерендеривается!!! (1 вариант) - работает ВЕЗДЕ
+      console.log(`toggleTrigger --> arrTrigger[${idNumber}]_ДО:`, arrTrigger[idNumber]); //!
+      arrTrigger[idNumber] = !arrTrigger[idNumber]; 
+      console.log(`toggleTrigger --> arrTrigger[${idNumber}]_ПОСЛЕ:`, arrTrigger[idNumber]); //!
+      //* ________ Так перерендеривается!!! (1 вариант) - работает ВЕЗДЕ
 
       // if (arrTrigger[idNumber]) {
       //       console.log(`TRUE-->arrTrigger[${idNumber}]:`, arrTrigger[idNumber]); //!
@@ -201,12 +203,12 @@ export const CardItem = ({ contacts }) => {
       //       console.log(`contacts[${idNumber}].followers`, contacts[idNumber].followers); //!
       //   };
       
-      //* Так перерендеривается!!! (1 вариант)
-      // setArrTrigger(prevArrTrigger => {
-      //   return [...prevArrTrigger]
-      // });
+      //* Так перерендеривается!!! (1 вариант) - работает ВЕЗДЕ
+      setArrTrigger(prevArrTrigger => {
+        return [...prevArrTrigger]
+      });
 
-      //* Так перерендеривается!!! (2 вариант)
+      //* Так перерендеривается!!! (2 вариант) - НЕ работает в test-goit-follow
       // setArrTrigger(prevArrTrigger => {
       //   console.log(`setArrTrigger --> arrTrigger[${idNumber}]_ДО:`, arrTrigger[idNumber]); //!
       //   arrTrigger[idNumber] = !prevArrTrigger[idNumber];
@@ -214,13 +216,13 @@ export const CardItem = ({ contacts }) => {
       //   return [...arrTrigger]
       // });
 
-      //* Так перерендеривается!!! (3 вариант)
-      setArrTrigger(() => {
-        console.log(`setArrTrigger --> arrTrigger[${idNumber}]_ДО:`, arrTrigger[idNumber]); //!
-        arrTrigger[idNumber] = !arrTrigger[idNumber];
-        console.log(`setArrTrigger --> arrTrigger[${idNumber}]_ПОСЛЕ:`, arrTrigger[idNumber]); //!
-        return [...arrTrigger]
-      });
+      //* Так перерендеривается!!! (3 вариант) - НЕ работает в test-goit-follow
+      // setArrTrigger(() => {
+      //   console.log(`setArrTrigger --> arrTrigger[${idNumber}]_ДО:`, arrTrigger[idNumber]); //!
+      //   arrTrigger[idNumber] = !arrTrigger[idNumber];
+      //   console.log(`setArrTrigger --> arrTrigger[${idNumber}]_ПОСЛЕ:`, arrTrigger[idNumber]); //!
+      //   return [...arrTrigger]
+      // });
 
       // setArrTrigger(arrTrigger); //! Так не перерендеривается, нужен Дополнительный триггер (ниже)
       //! Дополнительный триггер (для перерендования) --> уже не нужен

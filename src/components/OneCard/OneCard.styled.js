@@ -44,6 +44,7 @@ export const Card = styled.div`
             background-position-x: center;
             background-position-y: 28px, center;
 
+    //! HorizontalLine
     ::before {
     content: '';
     position: absolute;
@@ -56,6 +57,34 @@ export const Card = styled.div`
     box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.06),
         inset 0px -1.71846px 3.43693px #ae7be3, 
         inset 0px 3.43693px 2.5777px #fbf8ff;
+    }
+
+    //! RoundFrameAvatar
+    ::after {
+    content: '';
+    /* height: 82px; */
+    height: 62px;
+    /* width: 82px; */
+    width: 62px;
+    position: absolute;
+    top: 187px;
+    /* z-index: 99; */
+    /* border: 8px solid #EBD8FF; */
+    border-radius: 50%;
+    background: linear-gradient(
+            114.99deg, 
+            #471CA9 -0.99%, 
+            #5736A3 54.28%, 
+            #4B2A99 78.99%
+            );
+    //! НЕ по макету
+    box-shadow: 0px 4.39163px 4.39163px -4px rgb(0 0 0 / 6%), 
+        0px 0px 10px 2px #ae7be3, 
+        0px 0px 0px 8px #fbf8ff;
+    //! по макету
+    /* box-shadow: 0px 4.39163px 4.39163px rgba(0, 0, 0, 0.06), 
+        inset 0px -2.19582px 4.39163px #AE7BE3, 
+        inset 0px 4.39163px 3.29372px #FBF8FF; */
     }
 `;
 
@@ -95,7 +124,7 @@ export const HorizontalLine = styled.div`
         inset 0px 3.43693px 2.5777px #fbf8ff;
 `;
 
-
+//! Not used
 export const RoundFrameAvatar = styled.div`
     height: 80px;
     width: 80px;
@@ -152,8 +181,8 @@ export const RoundFrameAvatar = styled.div`
 
 export const Avatar = styled.img`
     position: absolute;
-        top: 2px;
-        left: 1px;
+        top: 188px;
+        /* left: 0px; */
     z-index: 77;
     border-radius: 50%;
     /* background: linear-gradient(
@@ -162,6 +191,9 @@ export const Avatar = styled.img`
             #5736A3 54.28%, 
             #4B2A99 78.99%
             ); */
+    /* box-shadow: 0px 4.39163px 4.39163px -4px rgb(0 0 0 / 6%), 
+    0px 0px 10px 2px #ae7be3, 
+    0px 0px 0px 8px #fbf8ff; */
 `;
 
 
