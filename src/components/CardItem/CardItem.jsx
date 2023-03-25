@@ -33,6 +33,7 @@ import {
   Avatar,
   // Rectangle, //! Not used
   // HorizontalLine, //! Not used
+  // RoundFrameUserName, //! Not used
   UserName, 
   Tweets,
   Followers
@@ -298,6 +299,10 @@ export const CardItem = ({ contacts }) => {
           /> */}
           {/* //! user name */}
           <UserName>{user}</UserName>
+          {/* <RoundFrameUserName>
+              <UserName>{user}</UserName>
+              <h1>{user}</h1>
+          </RoundFrameUserName> */}
           {/* //! tweets */}
           <Tweets>{tweets} tweets</Tweets>
           {/* //! FOLLOWERS */}

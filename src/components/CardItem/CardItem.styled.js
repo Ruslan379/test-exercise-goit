@@ -116,12 +116,67 @@ export const Avatar = styled.img`
             );
 `;
 
+//! Not used
+//! chat GPT
+export const RoundFrameUserName = styled.div`
+position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    
+    /* top: 155px; */
+    /* z-index: 99; */
+    /* border-radius: 50%; */
+    /* writing-mode: vertical-lr; */
+
+    /* text-align: center; */
+    /* text-anchor: middle; */
+    /* text-path: path("M 50, 50 m -50, 0 a 50,50 0 1,0 100,0 a 50,50 0 1,0 -100,0"); */
+
+    ::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid black;
+    /* z-index: -1; */
+    }
+
+    h1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    font-size: 8px;
+    text-align: center;
+    }
+`;
+
 
 export const UserName = styled.p`
     font-weight: 600;
+    font-size: 16px;
     position: absolute;
         top: 259px;
+        /* top: 10px; */
         color: #ba8bf8;
+
+    //! chat GPT
+    /* text-orientation: upright; */
+
+    /* position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) ;
+    transform: translateX(-50%) rotate(90deg);
+    margin: 0;
+    font-size: 16px;
+    text-align: center; */
 `;
 
 
