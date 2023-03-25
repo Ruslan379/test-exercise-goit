@@ -203,10 +203,18 @@ export const CardItem = ({ contacts }) => {
       //       console.log(`contacts[${idNumber}].followers`, contacts[idNumber].followers); //!
       //   };
       
-      //* Так перерендеривается!!! (1 вариант) - работает ВЕЗДЕ
-      setArrTrigger(prevArrTrigger => {
-        return [...prevArrTrigger]
-      });
+      // //* Так перерендеривается!!! (1.1 вариант) - работает ВЕЗДЕ
+      // setArrTrigger(prevArrTrigger => {
+      //   return [...prevArrTrigger]
+      // });
+
+      // * Так перерендеривается!!! (1.2 вариант)
+      // setArrTrigger(prevArrTrigger => {
+      //   return [...arrTrigger]
+      // });
+
+      // * Так перерендеривается!!! (1.3 вариант)
+      setArrTrigger([...arrTrigger]);
 
       //* Так перерендеривается!!! (2 вариант) - НЕ работает в test-goit-follow
       // setArrTrigger(prevArrTrigger => {
