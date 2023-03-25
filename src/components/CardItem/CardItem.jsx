@@ -34,6 +34,7 @@ import {
   // Rectangle, //! Not used
   // HorizontalLine, //! Not used
   // RoundFrameUserName, //! Not used
+  // CurvedText, //! Not used
   UserName, 
   Tweets,
   Followers
@@ -297,12 +298,32 @@ export const CardItem = ({ contacts }) => {
             src={rectangle}
             width="380"
           /> */}
+            
           {/* //! user name */}
-          <UserName>{user}</UserName>
+            <UserName>{user}</UserName>
+
+          {/* //! chat GPT не работает */}
           {/* <RoundFrameUserName>
               <UserName>{user}</UserName>
               <h1>{user}</h1>
           </RoundFrameUserName> */}
+            
+          {/* //! chat GPT не работает */}
+          {/* <CurvedText viewBox="0 0 500 200">
+            <path d="M10,100 Q250,20 490,100" />
+            <text>
+              <textPath xlinkHref="#curve">{user}</textPath>
+            </text>
+            </CurvedText> */}
+
+            {/* //! не работает */}
+            {/* <svg xmlns="http://www.w3.org/2000/svg"
+              width="920" height="160" viewBox="0 0 230 40">
+              <text text-anchor="middle" x="115" y="32" font-family="Times New Roman" font-size="35">
+                Hello, Toster
+              </text>
+            </svg> */}
+
           {/* //! tweets */}
           <Tweets>{tweets} tweets</Tweets>
           {/* //! FOLLOWERS */}

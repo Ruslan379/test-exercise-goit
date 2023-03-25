@@ -117,7 +117,7 @@ export const Avatar = styled.img`
 `;
 
 //! Not used
-//! chat GPT
+//! chat GPT - не работает
 export const RoundFrameUserName = styled.div`
 position: relative;
     width: 200px;
@@ -157,6 +157,22 @@ position: relative;
     }
 `;
 
+//! chat GPT - не работает
+export const CurvedText = styled.svg`
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    z-index: 99;
+    path {
+        fill: none;
+        stroke: black;
+        stroke-width: 1;
+    }
+    text {
+        font-size: 16px;
+        fill: #ba8bf8;
+    }
+`;
 
 export const UserName = styled.p`
     font-weight: 600;
